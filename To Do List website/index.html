@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Maken website eka resp[oinsive karabwa] -->
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />  <!-- meken thamai me icons tika gaththe (for task icons, plus icon, save icon, etc.) -->
+  </head>
+
+  <body>
+    <div class="container"> <!-- meya thamai main container ekameya hold karanwa evrythings -->
+
+  
+      <header>
+        <h1><i class="fas fa-tasks"></i> My To-Do App</h1>
+      </header>
+
+      <div class="app-container"> <!-- meya Wrapper all sections (today, notes, tracker, tomorrow) -->
+
+        <!-- TODAY SECTION -->
+        <section class="section today-section">
+          <h2 class="section-title"><i class="fas fa-sun"></i> TODAY</h2>
+
+          <div id="today-tasks">
+            <!-- JS will insert today's tasks inside this div -->
+          </div>
+
+          <div class="add-task">
+            <!-- Section to add a new task (input + button) -->
+
+            <input
+              type="text"
+              class="add-task-input"
+              id="today-task-input"
+              placeholder="Add a new task..."
+            />
+            <!-- Text box where user types a task -->
+
+            <button class="add-task-btn" id="add-today-task">
+              <i class="fas fa-plus"></i>
+            </button>
+            <!-- Button to add the typed task (plus icon) -->
+          </div>
+        </section>
+
+        <!-- IMPORTANT NOTES SECTION -->
+        <section class="section notes-section">
+          <h2 class="section-title">
+            <i class="fas fa-sticky-note"></i> IMPORTANT NOTES
+          </h2>
+
+          <div class="notes-section">
+            <textarea
+              class="notes-textarea"
+              id="notes-textarea"
+              placeholder="Write your important notes here..."
+            ></textarea>
+            <!-- Big textarea for writing important notes -->
+
+            <button class="save-btn" id="save-notes">
+              <i class="fas fa-save"></i> Save Notes
+            </button>
+            <!-- Button to save notes -->
+          </div>
+        </section>
+
+        <!-- TRACKER SECTION -->
+        <section class="section tracker-section">
+          <h2 class="section-title">
+            <i class="fas fa-chart-line"></i> TRACKER
+          </h2>
+
+          <div class="tracker-stats">
+            <!-- Shows total tasks, completed tasks, progress percentage -->
+
+            <div class="stat">
+              <div class="stat-value" id="total-tasks">0</div>
+              <!-- Total number of tasks -->
+              <div class="stat-label">Total</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-value" id="completed-tasks">0</div>
+              <!-- Completed tasks count -->
+              <div class="stat-label">Done</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-value" id="progress-percent">0%</</div>
+              <!-- Percentage progress -->
+              <div class="stat-label">Progress</div>
+            </div>
+          </div>
+
+          <div class="progress-bar">
+            <!-- Progress bar background -->
+
+            <div
+              class="progress-fill"
+              id="progress-fill"
+              style="width: 0%"
+            ></div>
+            <!-- Blue fill showing progress percentage -->
+          </div>
+        </section>
+
+<!-- FLEX CONTAINER -->
+<div class="tomorrow-flex">
+  
+  <!-- TOMORROW SECTION -->
+  <section class="section tomorrow-section">
+    <h2 class="section-title"><i class="fas fa-moon"></i> TOMORROW</h2>
+
+    <div id="tomorrow-tasks"></div>
+
+    <div class="add-task">
+      <input
+        type="text"
+        class="add-task-input"
+        id="tomorrow-task-input"
+        placeholder="Add a new task..."
+      />
+      <button class="add-task-btn" id="add-tomorrow-task">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+  </section>
+
+<div class="tomorrow-image">
+  <img src="cityy.jpg" alt="Decoration" />
+</div>
+
+</div>
+
+
+    <!-- Link karala thiyanne JavaScript ekka fot  functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
